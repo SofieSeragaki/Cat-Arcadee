@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cat Arcade</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div id="falling-cats-container"></div>
+<div class="menu">
+  <h1>Welcome to<br>Cat Arcade!</h1>
+  <div class="buttons">
+    <button class="cat-btn" onclick="startGame('cat-dash.html')">🐾 Cat Dash <span class="paw">🐾</span></button>
+    <button class="cat-btn">🐦 Fluffy Flight <span class="paw">🐾</span></button>
+    <button class="cat-btn">🌈 Kitty Climb <span class="paw">🐾</span></button>
+  </div>
+</div>
+<audio id="bg-music" src="song-background.mp3" loop></audio>
+<audio id="purr-sound" src="cat-meow.mp3"></audio>
+
+<script type="module" src="https://cdn.jsdelivr.net/npm/pixi.js@7.2.4/dist/pixi.mjs"></script>
+
+<script type="module" src="main.js"></script>
+</body>
+</html>

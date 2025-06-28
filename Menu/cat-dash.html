@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cat Dash</title>
+  <link rel="stylesheet" href="cat-dash.css" />
+</head>
+<body>
+<div class="cat-dash-wrapper">
+  <div class="game-window">
+    <div class="start-screen">
+      <h2 class="start-title">Cat Dash!</h2>
+      <p class="start-subtitle">Are you ready, meow!</p>
+
+      <script src="https://cdn.jsdelivr.net/npm/pixi.js@7.2.4/dist/pixi.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@pixi/filter-glow@4.2.0/dist/filter-glow.min.js"></script>
+
+      <div id="idle-cat-container" style="margin: 20px auto; width: 64px; height: 64px;"></div>
+
+      <div class="game-buttons">
+        <button id="play-btn">▶ Play</button>
+        <button id="back-btn">← Back to Arcade</button>
+      </div>
+    </div>
+
+    <div id="game-canvas-container" style="display: none;">
+      <canvas id="game-canvas" width="800" height="300"></canvas>
+    </div>
+    <div id="score-counter" style="display: none;">Score: 0</div>
+
+    <div id="game-over-screen" style="display: none;">
+      <h2>Game Over!</h2>
+      <p>Your Score: <span id="final-score">0</span></p>
+      <button id="restart-btn">Restart</button>
+      <button id="back-btn-end">Back to Arcade</button>
+    </div>
+  </div>
+</div>
+
+<audio id="purr-sound" src="cat-meow.mp3"></audio>
+<audio id="bg-music" src="cat-dash-song.mp3" loop></audio>
+
+<script src="cat-dash.js?v=1.0.1"></script>
+
+</body>
+</html>
