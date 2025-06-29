@@ -166,6 +166,24 @@ function startGame() {
     window.addEventListener("keydown", e => keys[e.code] = true);
     window.addEventListener("keyup", e => keys[e.code] = false);
 
+    let lastTapTime = 0;
+
+    app.view.addEventListener("touchstart", (e) => {
+        const currentTime = new Date().getTime();
+        const tapGap = currentTime - lastTapTime;
+
+        if (tapGap < 300 && jumpCount < maxJumps) {
+            cat.vy = jumpPower;
+            jumpCount++;
+        } else if (jumpCount < maxJumps) {
+            cat.vy = jumpPower;
+            jumpCount++;
+        }
+
+        lastTapTime = currentTime;
+    });
+
+
     app.ticker.add(gameLoop);
 }
 
